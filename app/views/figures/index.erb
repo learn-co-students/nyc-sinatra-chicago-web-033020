@@ -1,0 +1,17 @@
+
+<h1>Figure Name:</h1><br><br>
+    <% @figures.each do |figure| %>
+      <br><a href="/figures/<%= figure.id %>"><%= figure.name %></a><br>
+        Titles:
+          <% figure.titles.each do |title| %>
+          <%= title.name %><br>
+          Testing.
+          The code here doesn't work as intended, so either there is something missing in my associations, or the seed file that was pre-written with this exercize
+          isn't set up right. Yet the tests all pass.
+          <% end %>
+    <% end %>
+<br>
+
+<a class="button" href="figures/new">Create New Figure</a>
+<a class="button" href="/landmarks">View Landmarks</a>
+<a class="button" href="/">Home</a>
