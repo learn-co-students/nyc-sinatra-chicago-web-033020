@@ -34,7 +34,7 @@ landmarks_list.each do |name, landmark_hash|
   landmark_hash.each do |attribute, value|
       p[attribute] = value
   end
-  p.save
+  p.save!
 end
 
 figure_list = {
@@ -51,7 +51,7 @@ figure_list = {
 figure_list.each do |name, figure_hash|
   p = Figure.new
   p.name = name
-  p.save
+  p.save!
 end
 
 
@@ -67,5 +67,6 @@ title_list = {
 title_list.each do |name, figure_hash|
   p = Title.new
   p.name = name
-  p.save
+  p.save!
 end
+
